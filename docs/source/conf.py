@@ -18,14 +18,8 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinx.ext.mathjax',
-    'sphinx_markdown_tables',
+    "myst_parser",
 ]
-
-source_suffix = ['.rst', '.md']
-
-source_parsers = {
-    '.md': 'recommonmark.parser.CommonMarkParser',
-}
 
 master_doc = 'index'
 
@@ -36,6 +30,10 @@ intersphinx_mapping = {
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
+
+# -- Options for extensions
+
+myst_enable_extensions = ["dollarmath"]
 
 # -- Options for HTML output
 
