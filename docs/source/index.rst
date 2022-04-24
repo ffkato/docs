@@ -6,7 +6,28 @@ It's intended to be helpful for quick reference,
 with a focus on conciseness and originality.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :caption: Paper Summary
+   :name: sec-paper
+
+   docs/paper-summary/communication-network/fat-tree
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Paper Summary
+   :name: sec-paper
+
+   docs/paper-summary/communication-network
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Paper Summary
+   :name: sec-paper
+
+   docs/paper-summary
+
+.. toctree::
+   :maxdepth: 3
    :caption: Paper Summary
    :name: sec-paper
    :hidden:
