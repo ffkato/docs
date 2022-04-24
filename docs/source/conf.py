@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Functional Kato Docs'
+copyright = 'ffkato'
+author = 'ffkato'
 
-release = '0.1'
-version = '0.1.0'
+release = ''
+version = ''
 
 # -- General configuration
 
@@ -17,7 +17,17 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'sphinx.ext.mathjax',
+    'sphinx_markdown_tables',
 ]
+
+source_suffix = ['.rst', '.md']
+
+source_parsers = {
+    '.md': 'recommonmark.parser.CommonMarkParser',
+}
+
+master_doc = 'index'
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
@@ -31,5 +41,8 @@ templates_path = ['_templates']
 
 html_theme = 'sphinx_rtd_theme'
 
-# -- Options for EPUB output
-epub_show_urls = 'footnote'
+html_static_path = ['_static']
+
+html_css_files = [
+    'style.css',
+]
