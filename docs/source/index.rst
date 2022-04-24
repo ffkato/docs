@@ -1,22 +1,14 @@
-Welcome to Lumache's documentation!
+Functional Kato Docs
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
-.. note::
-
-   This project is under active development.
-
-Contents
---------
+This is a place for personally collected knowledge base.
+It's intended to be helpful for quick reference,
+with a focus on conciseness and originality.
 
 .. toctree::
+   :maxdepth: 2
+   :caption: Paper Summary
+   :name: sec-paper
+   :hidden:
 
-   usage
-   api
+   docs/paper-summary
