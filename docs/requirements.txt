@@ -1,1 +1,1 @@
-sphinx-markdown-tables
+myst_parser
