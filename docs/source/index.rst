@@ -10,7 +10,6 @@ find satisfying answers by online search quickly.
    :maxdepth: 2
    :caption: Paper Summaries
    :name: sec-paper
-   :hidden:
 
    index_paper_network
 
@@ -18,6 +17,5 @@ find satisfying answers by online search quickly.
    :maxdepth: 2
    :caption: Natural Languages
    :name: sec-nl
-   :hidden:
 
    index_nl_jp
