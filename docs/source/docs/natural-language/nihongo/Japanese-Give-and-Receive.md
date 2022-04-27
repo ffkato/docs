@@ -115,6 +115,8 @@ Examples
 
 Polite form of くれる
 
+Asking others to do Y for us/me
+
 * Giver
   * In-group superior
   * Out-group
