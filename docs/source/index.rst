@@ -10,6 +10,7 @@ find satisfying answers by online search quickly.
    :maxdepth: 1
    :caption: Algorithms and Data Structures
    :name: sec-alg-ds
+   :hidden:
 
    docs/algorithms-data-structures/binary-tree-traversal
 
@@ -17,14 +18,24 @@ find satisfying answers by online search quickly.
    :maxdepth: 1
    :caption: Paper Summaries - Networking
    :name: sec-paper-networking
+   :hidden:
 
    docs/paper-summary/communication-network/fat-tree
    docs/paper-summary/communication-network/inside-facebook-2015
-   
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Paper Summaries - OS
+   :name: sec-paper-os
+   :hidden:
+
+   docs/paper-summary/operating-system/the-the-multiprogramming
+
 .. toctree::
    :maxdepth: 1
    :caption: Japanese Language
    :name: sec-nl
+   :hidden:
 
    docs/japanese-language/Japanese-Give-and-Receive
    docs/japanese-language/Japanese-Verb-Forms
