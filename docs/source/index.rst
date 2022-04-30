@@ -8,6 +8,13 @@ find satisfying answers by online search quickly.
 
 .. toctree::
    :maxdepth: 2
+   :caption: Algorithms and Data Structures
+   :name: sec-alg-ds
+
+   docs/algorithms-data-structures/binary-tree-traversal
+
+.. toctree::
+   :maxdepth: 2
    :caption: Paper Summaries
    :name: sec-paper
 
