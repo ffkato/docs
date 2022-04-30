@@ -7,7 +7,7 @@ emphasizing concision, focusing on the ones that are hard to
 find satisfying answers by online search quickly.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Algorithms and Data Structures
    :name: sec-alg-ds
 
@@ -21,8 +21,11 @@ find satisfying answers by online search quickly.
    index_paper_network
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Natural Languages
+   :maxdepth: 1
+   :caption: Japanese Language
    :name: sec-nl
 
-   index_nl_jp
+   docs/japanese-language/Japanese-Give-and-Receive
+   docs/japanese-language/Japanese-Verb-Forms
+   docs/japanese-language/Japanese-keigo-kenjyougo
+   docs/japanese-language/Japanese-te-Auxiliary
