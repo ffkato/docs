@@ -14,12 +14,13 @@ find satisfying answers by online search quickly.
    docs/algorithms-data-structures/binary-tree-traversal
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Paper Summaries
-   :name: sec-paper
+   :maxdepth: 1
+   :caption: Paper Summaries - Networking
+   :name: sec-paper-networking
 
-   index_paper_network
-
+   docs/paper-summary/communication-network/fat-tree
+   docs/paper-summary/communication-network/inside-facebook-2015
+   
 .. toctree::
    :maxdepth: 1
    :caption: Japanese Language
