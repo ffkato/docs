@@ -16,6 +16,14 @@ find satisfying answers by online search quickly.
 
 .. toctree::
    :maxdepth: 1
+   :caption: Operating System
+   :name: sec-os
+   :hidden:
+
+   docs/operating-system/os-intro.md
+
+.. toctree::
+   :maxdepth: 1
    :caption: Paper Summaries - Networking
    :name: sec-paper-networking
    :hidden:
