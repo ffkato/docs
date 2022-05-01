@@ -13,6 +13,7 @@ find satisfying answers by online search quickly.
    :hidden:
 
    docs/algorithms-data-structures/binary-tree-traversal
+   docs/algorithms-data-structures/graph-algorithms
 
 .. toctree::
    :maxdepth: 1
@@ -20,7 +21,7 @@ find satisfying answers by online search quickly.
    :name: sec-os
    :hidden:
 
-   docs/operating-system/os-intro.md
+   docs/operating-system/os-intro
 
 .. toctree::
    :maxdepth: 1
