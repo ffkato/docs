@@ -187,7 +187,7 @@ A timer is used for the OS to regain control periodically.
 
 * generate interrupts periodically
 * handled by the kernel to decide what runs next
-* basis for OS scheduler, preemption (OS "forcibly" takes away CPU from a running process)
+* basis for OS scheduler, `preemption` (OS "forcibly" takes away CPU from a running process)
 * prevent infinite loops
 * time-based functions
 
