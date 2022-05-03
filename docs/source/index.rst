@@ -22,6 +22,7 @@ find satisfying answers by online search quickly.
    :hidden:
 
    docs/operating-system/os-intro
+   docs/operating-system/process-thread
 
 .. toctree::
    :maxdepth: 1
