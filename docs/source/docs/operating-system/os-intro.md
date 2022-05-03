@@ -18,6 +18,17 @@ An operating system
 * must protect OS from programs
 * may protect programs from OS
 
+A kernel
+
+* a subset of operating system
+* the software that provides the critical OS services
+* for example, UI can be part of the OS, but not in the kernel
+* for the purpose, will use "kernel" and "OS" in an un-confusing interchangeable way
+
+Abstraction is a provided simple interface
+(usually with an illusion of unlimited processors and memory)
+that hides the complexity.
+
 ## Architecture Supports OS
 
 Commonly, OS uses supports from the architecture to
@@ -165,8 +176,6 @@ The syscall may block if the required data is not ready.
 
 Specific implementations differ. Other examples: `int` instruction, `sysenter` and `sysexit` instructions.
 
------------------------------------------------------
-
 Read more
 
 * [6s081-lec-syscall.pdf](https://pdos.csail.mit.edu/6.S081/2021/slides/6s081-lec-syscall.pdf)
@@ -178,7 +187,7 @@ A timer is used for the OS to regain control periodically.
 
 * generate interrupts periodically
 * handled by the kernel to decide what runs next
-* basis for OS scheduler, preemption
+* basis for OS scheduler, preemption (OS "forcibly" takes away CPU from a running process)
 * prevent infinite loops
 * time-based functions
 
@@ -203,6 +212,10 @@ Alternatively, OS can do polling instead of using interrupts
 * programmed I/O (PIO)
 * not always worse than interrupts
 * hybrid way usually better
+
+Read more:
+
+* [Classes of Devices and Modules - Linux Device Drivers, Second Edition [Book]](https://www.oreilly.com/library/view/linux-device-drivers/0596000081/ch01s03.html)
 
 ## File Descriptor
 
