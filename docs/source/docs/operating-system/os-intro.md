@@ -242,3 +242,7 @@ via interprocess communication (IPC).
 * usually worse performance
 
 Mac OS and Windows do hybrid kernel.
+
+## Book
+
+A free comprehensive book: [Operating Systems: Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/)
