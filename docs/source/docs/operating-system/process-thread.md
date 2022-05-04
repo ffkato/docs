@@ -24,13 +24,13 @@ A process has an execution state
   * CPU is controlled by another process
 * Waiting: block on async event, e.g. I/O
 
-|                |           |                      |                        |
-| -------------- | --------- | -------------------- | ---------------------- |
-| **New**        | → create  | **Ready**            |                        |
-|                |           | ↓ Deschedule/Preempt | ↖ I/O done, etc.       |
-|                |           | ↓ ↑                  | **Waiting**            |
-|                |           | ↑ Schedule           | ↗ I/O, page fault etc. |
-| **Terminated** | ← process | **Running**          |                        |
+|                |          |                      |                        |
+| -------------- | -------- | -------------------- | ---------------------- |
+| **New**        | → create | **Ready**            |                        |
+|                |          | ↓ Deschedule/Preempt | ↖ I/O done, etc.       |
+|                |          | ↓ ↑                  | **Waiting**            |
+|                |          | ↑ Schedule           | ↗ I/O, page fault etc. |
+| **Terminated** | ← exit   | **Running**          |                        |
 
 If there are multiple "ready" processes, it's the scheduler's job to decide
 which one to run. See the *scheduling* section.
@@ -239,7 +239,7 @@ Multi-threading can help
 * make certain programming easier
 * switching among threads may be cheaper than among processes
 
-Kernel-level threads (native or non-green threads) are managed by the OS
+**Kernel-level threads** (native or non-green threads) are managed by the OS
 
 * informed scheduling: integrated with the OS
   * both user- and kernel-space stacks
@@ -254,7 +254,7 @@ Kernel-level threads (native or non-green threads) are managed by the OS
 
 (terminology: `kernel thread` can literally mean the threads in the kernel that typically is a native thread)
 
-User-level threads (green threads) are managed by the runtime, namely the user-level library
+**User-level threads** (green threads) are managed by the runtime, namely the user-level library
 
 * uninformed scheduling
   * use procedure calls to create, switch between, synchronize threads
@@ -271,7 +271,7 @@ User-level threads (green threads) are managed by the runtime, namely the user-l
     * can have specifically optimized scheduling policy
 * POSIX: pthreads PTHREAD_SCOPE_PROCESS
 
-n:m threading
+**n:m threading**
 
 * n user threads for m k-threads
 * kernel-level threading is 1:1
@@ -284,6 +284,8 @@ n:m threading
   * difficult to ensure relative priority
     * Linux has dynamic priority by default
     * need to work with OS interface and policies
+
+---------------------------------------
 
 Non-preemptive threads must voluntarily give up CPU.
 Preemptive scheduling uses interrupts for involuntary context switches.
