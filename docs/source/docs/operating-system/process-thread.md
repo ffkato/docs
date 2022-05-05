@@ -3,15 +3,7 @@
 A program is a static entity with the potential for execution.
 
 A process (task, job, sequential process) is the unit of execution and scheduling,
-the OS abstraction for a program in execution with its dynamic execution context,
-an "instance" of a program.
-
-For a single-core machine, the illusion of running multiple processes together
-is created by context switching and giving quantum of CPU time to each process.
-
-* this is a preemptive multitasking OS
-* most of today's systems do so
-* non-preemptive/cooperative systems, in contrast, allows programs to run until termination or blocking on I/O
+the OS abstraction for a program in execution with its dynamic execution context.
 
 ## Execution State
 
@@ -212,7 +204,7 @@ Processes can interact via
 
 * shared files
   * just write and read the same file; most basic
-* passing messages through kernel
+* passing messages
   * e.g. [pipe](https://man7.org/linux/man-pages/man2/pipe.2.html), [fifo (named pipe)](https://man7.org/linux/man-pages/man7/fifo.7.html), [socket](https://man7.org/linux/man-pages/man7/unix.7.html)
 * shared memory
   * e.g. [linux shm](https://man7.org/linux/man-pages/man7/shm_overview.7.html)
@@ -226,7 +218,9 @@ and its address space, file descriptors etc. are shared by its threads.
 
 A thread has a stack, registers, and a PC. Threads' stacks can be accessed by the others within same process.
 It's a sequential execution flow within a process, a unit of scheduling (a process is now a container of threads).
-The data structure representing a thread is thread control block (TCB).
+
+The data structure representing a thread is thread control block (TCB). TCBs are linked to their belonging PCB.
+Some fields appear in both PCB and TCB, such as PC.
 
 Multi-threading can help
 
@@ -237,17 +231,20 @@ Multi-threading can help
   * `parallelism`: tasks running at the same time
   * requiring multiple CPUs or cores
 * make certain programming easier
-* switching among threads may be cheaper than among processes
+* switching between threads may be cheaper than among processes
 
 **Kernel-level threads** (native or non-green threads) are managed by the OS
 
-* informed scheduling: integrated with the OS
+* integrated with the OS
   * both user- and kernel-space stacks
   * thread management needs trapping into the kernel: overhead
   * needs to be generic to support general needs
     * usually comes with heavy features, potential overhead
   * slower to create, manipulate, synchronize
   * real parallelism capability, better for I/O
+
+Examples:
+
 * Windows: threads
 * Solaris: light process (LWP)
 * POSIX: pthreads PTHREAD_SCOPE_SYSTEM
@@ -256,12 +253,11 @@ Multi-threading can help
 
 **User-level threads** (green threads) are managed by the runtime, namely the user-level library
 
-* uninformed scheduling
+* invisible to the OS
+  * appears as one thread
+  * cannot use multiprocessors and thus no parallelism
   * use procedure calls to create, switch between, synchronize threads
   * faster to create, manipulate, synchronize
-  * invisible to the OS
-    * appears as one thread
-    * cannot use multiprocessors and thus no parallelism
   * runtime thread manager needs to communicate with the kernel
     * may ask OS for periodical interrupts
   * fate-sharing
@@ -269,6 +265,9 @@ Multi-threading can help
     * page faulting blocks all threads
   * much less overhead than kernel-level threads, typically 100 times faster
     * can have specifically optimized scheduling policy
+
+Examples:
+
 * POSIX: pthreads PTHREAD_SCOPE_PROCESS
 
 **n:m threading**
@@ -290,7 +289,7 @@ Multi-threading can help
 Non-preemptive threads must voluntarily give up CPU.
 Preemptive scheduling uses interrupts for involuntary context switches.
 
-Because threads can access the same memory, the execution is out of program's control and switching happens arbitrarily,
+Because threads can access the same memory, the execution order is out of program's control and switching happens arbitrarily,
 program needs to use synchronization to control cooperation, usually by restricting interleaving executions.
 See `synchronization` section.
 
