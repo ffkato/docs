@@ -23,6 +23,7 @@ find satisfying answers by online search quickly.
 
    docs/operating-system/os-intro
    docs/operating-system/process-thread
+   docs/operating-system/scheduling
 
 .. toctree::
    :maxdepth: 1
