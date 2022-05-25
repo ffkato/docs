@@ -24,6 +24,7 @@ find satisfying answers by online search quickly.
    docs/operating-system/os-intro
    docs/operating-system/process-thread
    docs/operating-system/scheduling
+   docs/operating-system/concurrency-synchronization
 
 .. toctree::
    :maxdepth: 1
